@@ -1,0 +1,37 @@
+.button {
+    width: 150px;
+    height: 40px;
+    margin-left: 12px;
+    font-size: 30px;
+    border-radius: 20px;
+    color: black;
+    background: #61dafb;
+    outline: 2px solid #61dafb;
+    outline-offset: -2px;
+}
+
+.button:disabled {
+    background: #61dafb;
+    opacity: 50%;
+}
+
+.setButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+    border: 2px solid #61dafb;
+    border-radius: 15px;
+    width: 518px;
+    height: 60px;
+}
+.resetIncrementButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+    border: 2px solid #61dafb;
+    border-radius: 15px;
+    width: 518px;
+    height: 60px;
+}

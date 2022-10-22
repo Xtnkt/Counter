@@ -1,0 +1,8 @@
+.scoreBoardRed{
+ color: red;
+}
+.scoreBoard {
+ display: flex;
+ color:black;
+
+}

@@ -1,0 +1,45 @@
+.input {
+    box-sizing: border-box;
+    outline:2px solid #61dafb;
+    border-radius: 5px;
+    width: 200px;
+    height: 60px;
+    padding: 8px 0px 8px 24px;
+    margin-left: 20px;
+    font-size:40px;
+    text-align:end;
+    background-color: #61dafb;
+
+}
+.motherDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px  solid #61dafb;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+
+}
+.startValueInput {
+    display: flex;
+    align-items: center;
+    color:#61dafb;
+}
+.maxValueInput{
+    display: flex;
+    align-items: center;
+    color:#61dafb;
+    margin-top: 10px;
+
+}
+
+.errorInput {
+    outline:2px solid rgba(204, 20, 57, 1);
+    border-radius: 5px;
+    background-color: rgba(204, 20, 57, 1);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
