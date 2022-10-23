@@ -5,13 +5,7 @@ import s from './Counter.module.css'
 import {InputData} from "../InputData/InputData";
 import {ScoreBoard} from "../SroreBoard/ScoreBoard";
 
-
-type CounterPropsType = {
-    title: string
-}
-
-
-export const Counter = (props: CounterPropsType) => {
+export const Counter = () => {
 
     const [typedStartValue, setTypedStartValue] = useState<number>(0)
     const [typedMaxValue, setTypedMaxValue] = useState<number>(5)
@@ -32,7 +26,6 @@ export const Counter = (props: CounterPropsType) => {
         let newCounterValue = counterValue + 1
         setCounterValue(newCounterValue)
     }
-
     const onClickResetHandler = () => {
         setCounterValue(startValue)
     }
@@ -43,10 +36,7 @@ export const Counter = (props: CounterPropsType) => {
         setStartValue(typedStartValue)
         setMaxValue(typedMaxValue)
         setCounterValue(typedStartValue)
-
-
     }
-
 
     return (
         <div className={s.mainDiv}>
@@ -61,26 +51,25 @@ export const Counter = (props: CounterPropsType) => {
 
                 />
                 <div className={b.setButton}>
-                    <Button className={b.button} disabled={(startValue === typedStartValue) && (maxValue === typedMaxValue)}
+                    <Button className={b.button}
+                            disabled={(startValue === typedStartValue) && (maxValue === typedMaxValue)}
                             name={'set'} callBack={onClickSetHandler}/>
                 </div>
-
             </div>
-
             <div className={s.buttonsAndScoreBoard}>
                 <ScoreBoard counterValue={counterValue}
                             maxValue={maxValue}
                             errorState={errorState}
                 />
                 <div className={b.resetIncrementButtons}>
-                    <Button className={b.button} disabled={(counterValue === maxValue) || (errorState)} name={'increment'}
+                    <Button className={b.button} disabled={(counterValue === maxValue) || (errorState)}
+                            name={'increment'}
                             callBack={onClickIncrementHandler}/>
-                    <Button className={b.button} disabled={(counterValue === typedStartValue) || (errorState)} name={'reset'}
+                    <Button className={b.button} disabled={(counterValue === typedStartValue) || (errorState)}
+                            name={'reset'}
                             callBack={onClickResetHandler}/>
                 </div>
             </div>
-
-
         </div>
     );
 };

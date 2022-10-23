@@ -25,11 +25,11 @@
     width: 518px;
     height: 60px;
 }
-.resetIncrementButtons{
+
+.resetIncrementButtons {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 10px 0px 0px 0px;
     border: 2px solid #61dafb;
     border-radius: 15px;
     width: 518px;

@@ -1,8 +1,22 @@
-.scoreBoardRed{
- color: red;
+.scoreBoardRed {
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #61dafb;
+    margin: 20px 5px 10px 5px;
+    width: 518px;
+    height: 190px;
+    border-radius: 15px
 }
-.scoreBoard {
- display: flex;
- color:black;
 
+.scoreBoard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #61dafb;
+    margin: 20px 5px 10px 5px;
+    width: 518px;
+    height: 190px;
+    border-radius: 15px
 }

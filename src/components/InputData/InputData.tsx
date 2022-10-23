@@ -5,18 +5,17 @@ type InputDataPropsType = {
     inputOnChangeStartValue: (e: ChangeEvent<HTMLInputElement>) => void,
     inputOnChangeMaxValue: (e: ChangeEvent<HTMLInputElement>) => void,
     errorState: boolean,
-    typedStartValue:number,
-    typedMaxValue:number,
-    startValue:number,
-    maxValue:number
-
+    typedStartValue: number,
+    typedMaxValue: number,
+    startValue: number,
+    maxValue: number
 }
 
 export const InputData = (props: InputDataPropsType) => {
     const StartValueInputClassName = s.input
-    + (((props.errorState) || (props.startValue<0) )?  ' ' + s.errorInput : ' ' + s.superInput)
+        + (((props.errorState) || (props.startValue < 0)) ? ' ' + s.errorInput : ' ' + s.superInput)
     const MaxValueInputClassName = s.input
-        + (((props.errorState) || (props.maxValue<0) )?  ' ' + s.errorInput : ' ' + s.superInput)
+        + (((props.errorState) || (props.maxValue < 0)) ? ' ' + s.errorInput : ' ' + s.superMaxInput)
     return (
         <div className={s.motherDiv}>
             <div className={s.startValueInput}>
@@ -37,7 +36,6 @@ export const InputData = (props: InputDataPropsType) => {
                        onChange={props.inputOnChangeMaxValue}
                        className={MaxValueInputClassName}/>
             </div>
-
         </div>
     );
 };

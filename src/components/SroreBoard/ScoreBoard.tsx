@@ -17,7 +17,6 @@ export const ScoreBoard = (props: ScoreBoardPropsType) => {
                 : (props.counterValue < props.maxValue) ?
                     <div className={s.scoreBoard}>{props.counterValue}</div> :
                     <div className={s.scoreBoardRed}>{props.counterValue}</div>
-
         )
     }
     return (

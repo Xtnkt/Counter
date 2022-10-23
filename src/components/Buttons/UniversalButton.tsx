@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 
 type ButtonType = {
-    disabled?:boolean
+    disabled?: boolean
     name: string,
     callBack: () => void
     className?: string
 }
 
-export const Button = (props:ButtonType) => {
+export const Button = (props: ButtonType) => {
 
     const onClickHandler = () => {
         props.callBack()
