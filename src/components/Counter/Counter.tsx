@@ -26,8 +26,27 @@ export const Counter = () => {
         let newCounterValue = counterValue + 1
         setCounterValue(newCounterValue)
     }
-    const onClickResetHandler = () => {
-        setCounterValue(startValue)
+    const onClickLocalStorageValuesHandler = () => {
+        let startValueAsString = localStorage.getItem('startValue')
+        let maxValueAsString = localStorage.getItem('maxValue')
+        if (startValueAsString && maxValueAsString){
+            let startValue = JSON.parse(startValueAsString)
+            let maxValue = JSON.parse(maxValueAsString)
+           if  (startValue>=maxValue || startValue<0 || maxValue <0){
+              setErrorState(true)
+               setTypedMaxValue(maxValue)
+               setStartValue(startValue)
+               setTypedStartValue(startValue)
+               setMaxValue(maxValue)
+           }  else {
+               setErrorState(false)
+               setTypedMaxValue(maxValue)
+               setStartValue(startValue)
+               setTypedStartValue(startValue)
+               setMaxValue(maxValue)
+               setCounterValue(startValue)
+           }
+        }
     }
     const onClickSetHandler = () => {
         ((typedStartValue >= typedMaxValue) || typedStartValue < 0 || typedMaxValue < 0) ?
@@ -36,6 +55,11 @@ export const Counter = () => {
         setStartValue(typedStartValue)
         setMaxValue(typedMaxValue)
         setCounterValue(typedStartValue)
+        localStorage.setItem('startValue', JSON.stringify(typedStartValue))
+        localStorage.setItem('maxValue', JSON.stringify(typedMaxValue))
+    }
+    const onClickResetHandler = () => {
+        setCounterValue(startValue)
     }
 
     return (
@@ -54,6 +78,8 @@ export const Counter = () => {
                     <Button className={b.button}
                             disabled={(startValue === typedStartValue) && (maxValue === typedMaxValue)}
                             name={'set'} callBack={onClickSetHandler}/>
+                    <Button className={b.button + ' ' + b.storeButton}
+                            name={'SavedValues'} callBack={onClickLocalStorageValuesHandler}/>
                 </div>
             </div>
             <div className={s.buttonsAndScoreBoard}>

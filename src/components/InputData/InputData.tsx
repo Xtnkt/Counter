@@ -15,7 +15,7 @@ export const InputData = (props: InputDataPropsType) => {
     const StartValueInputClassName = s.input
         + (((props.errorState) || (props.startValue < 0)) ? ' ' + s.errorInput : ' ' + s.superInput)
     const MaxValueInputClassName = s.input
-        + (((props.errorState) || (props.maxValue < 0)) ? ' ' + s.errorInput : ' ' + s.superMaxInput)
+        + (((props.errorState) || (props.maxValue < 0)) ? ' ' + s.errorMaxInput : ' ' + s.superMaxInput)
     return (
         <div className={s.motherDiv}>
             <div className={s.startValueInput}>
