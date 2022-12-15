@@ -1,3 +1,14 @@
+.setButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+    border: 2px solid #61dafb;
+    border-radius: 15px;
+    width: 518px;
+    height: 60px;
+}
+
 .button {
     width: 150px;
     height: 40px;
@@ -14,19 +25,9 @@
     background: #61dafb;
     opacity: 50%;
 }
-.storeButton{
-    width: 200px;
-}
 
-.setButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0px 0px 0px;
-    border: 2px solid #61dafb;
-    border-radius: 15px;
-    width: 518px;
-    height: 60px;
+.storeButton {
+    width: 200px;
 }
 
 .resetIncrementButtons {
